@@ -7,7 +7,9 @@ At its core, **webpack** is a static module bundler for modern JavaScript applic
 ## Why do we need webpack?
 
 There are two ways to run JavaScript in a browser. _First_, include a script for each functionality; this solution is hard to scale because loading too many scripts can cause a network bottleneck. The _second_ option is to use a big.js file containing all your project code, but this leads to problems in scope, size, readability and maintainability.
+
 If you have written **_react_** code you would know that it requires writing a lot of javascript files and importing these files to other files. We do this using some sort of module system, two most popular module systems are **CommonJS’s** uses _require()_ syntax and **ESM’s** use _import_ syntax. Unfortunately, there is no browser support for CommonJs and support for ESM (ES6/ES8 syntax) is not universal yet. So we need a tool that can take all the files that we have written and combine/bundle them into a single js file while keeping track of their _dependencies_. The tool that does this are called **bundlers** and **webpack** is one of the many javascript bundlers!
+
 Before moving forward, we should note that Webpack only understands _Javascript_ and _JSON_. So it converts other frontend files like HTML and CSS into modules with the help of a loader and thus provides a complete frontend solution to us. It internally makes a _dependency graph_ while processing any application.
 
 ### It ships with a few packages for us:
